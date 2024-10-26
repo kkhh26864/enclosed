@@ -1,6 +1,7 @@
+version: '3'
 services:
   enclosed:
-    image: corentinth/enclosed
+    build: .
     ports:
       - 8787:8787
     volumes:

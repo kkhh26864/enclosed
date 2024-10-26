@@ -3,13 +3,23 @@ import * as i18n from '@solid-primitives/i18n';
 import { makePersisted } from '@solid-primitives/storage';
 import { merge } from 'lodash-es';
 import { createContext, createResource, createSignal, Show, useContext } from 'solid-js';
-import defaultDict from '../../locales/en.json';
+import defaultDict from '../../locales/zh-CN.json';
 
 export {
   useI18n,
 };
 
 const locales = [
+  {
+    key: 'zh-CN',
+    file: 'zh-CN',
+    name: '简体中文',
+  },
+  {
+    key: 'zh-TW',
+    file: 'zh-TW',
+    name: '繁體中文',
+  },
   {
     key: 'en',
     file: 'en',
@@ -35,11 +45,7 @@ const locales = [
     file: 'ru',
     name: 'Русский',
   },
-  {
-    key: 'zh-CN',
-    file: 'zh-CN',
-    name: '简体中文',
-  },
+ 
 ] as const;
 
 type Locale = typeof locales[number]['key'];
@@ -72,13 +78,26 @@ async function fetchDictionary(locale: Locale): Promise<Dictionary> {
 }
 
 function getBrowserLocale(): Locale {
-  const browserLocale = navigator.language?.split('-')[0];
+  const browserLocale = navigator.language;
 
   if (!browserLocale) {
-    return 'en';
+    return 'zh-CN'; // 默认返回简体中文
   }
 
-  return locales.find(locale => locale.key === browserLocale)?.key ?? 'en';
+  // 检查完整的语言代码（例如 'zh-TW'）
+  const exactMatch = locales.find(locale => locale.key === browserLocale);
+  if (exactMatch) {
+    return exactMatch.key;
+  }
+
+  // 如果没有完全匹配，则检查语言代码的第一部分（例如 'zh'）
+  const languageCode = browserLocale.split('-')[0];
+  const partialMatch = locales.find(locale => locale.key.startsWith(languageCode));
+  if (partialMatch) {
+    return partialMatch.key;
+  }
+
+  return 'zh-CN'; // 如果没找到匹配的语言，默认使用简体中文
 }
 
 export const I18nProvider: ParentComponent = (props) => {

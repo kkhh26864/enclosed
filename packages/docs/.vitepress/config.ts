@@ -5,7 +5,7 @@ import { githubIcon, xIcon } from './theme/icons';
 
 const basePath = process.env.DOCS_BASE_PATH; // undefined for root /
 
-const createAbsoluteUrl = (path: string) => `https://enclosed.cc/${path.replace(/(^\/$)/g, '')}`;
+const createAbsoluteUrl = (path: string) => `https://yhjf.zymn.cc/${path.replace(/(^\/$)/g, '')}`;
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -38,7 +38,7 @@ export default defineConfig({
     ['meta', { name: 'og:title', content: 'Enclosed documentation' }],
     ['meta', { name: 'og:description', content: 'Send private and secure notes' }],
     ['meta', { name: 'og:image', content: createAbsoluteUrl('og-image.png') }],
-    ['meta', { name: 'og:url', content: 'https://enclosed.cc' }],
+    ['meta', { name: 'og:url', content: 'https://yhjf.zymn.cc' }],
     ['meta', { name: 'og:type', content: 'website' }],
     ['meta', { name: 'og:site_name', content: 'Enclosed' }],
     ['meta', { name: 'og:locale', content: 'en_US' }],
@@ -65,7 +65,7 @@ export default defineConfig({
 
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Enclosed App', link: 'https://enclosed.cc' },
+      { text: 'Enclosed App', link: 'https://yhjf.zymn.cc' },
     ],
 
     sidebar: [

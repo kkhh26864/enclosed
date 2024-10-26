@@ -1,10 +1,4 @@
-<p align="center">
-<picture>
-    <source srcset="./.github/icon-dark.png" media="(prefers-color-scheme: light)">
-    <source srcset="./.github/icon-light.png" media="(prefers-color-scheme: dark)">
-    <img src="./.github/icon-dark.png" alt="Header banner">
-</picture>
-</p>
+ docker-compose up --build
 
 <h1 align="center">
   Enclosed - Send private and secure notes

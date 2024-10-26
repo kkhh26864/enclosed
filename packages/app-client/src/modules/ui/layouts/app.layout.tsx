@@ -44,13 +44,8 @@ const LanguageSwitcher: Component = () => {
         <DropdownMenuItem onClick={() => setLocale(locale.key)} class={cn('flex items-center gap-2 cursor-pointer', { 'font-semibold': getLocale() === locale.key })}>
           {locale.name}
         </DropdownMenuItem>
-      ))}
-
-      <DropdownMenuSeparator />
-
-      <DropdownMenuItem as="a" class="flex items-center gap-2 cursor-pointer" target="_blank" rel="noopener noreferrer" href="https://github.com/CorentinTh/enclosed/tree/main/packages/app-client/src/locales">
-        {t('navbar.settings.contribute-to-i18n')}
-      </DropdownMenuItem>
+      ))} 
+      
     </>
   );
 };
@@ -87,9 +82,7 @@ export const Navbar: Component = () => {
             {t('navbar.new-note')}
           </Button>
 
-          <Button variant="ghost" class="text-lg px-0 size-9 hidden md:inline-flex" as={A} href="https://github.com/CorentinTh/enclosed" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository">
-            <div class="i-tabler-brand-github"></div>
-          </Button>
+         
 
           <DropdownMenu>
             <DropdownMenuTrigger as={Button} class="text-lg px-0 size-9 hidden md:inline-flex" variant="ghost" aria-label="Change theme">
@@ -111,18 +104,12 @@ export const Navbar: Component = () => {
 
           <DropdownMenu>
 
-            <DropdownMenuTrigger as={Button} class="text-lg px-0 size-9" variant="ghost" aria-label="Menu icon">
-              <div class="i-tabler-dots-vertical hidden md:block"></div>
-              <div class="i-tabler-menu-2 block md:hidden"></div>
-            </DropdownMenuTrigger>
+            
 
             <DropdownMenuContent class="w-46">
 
               {/* Mobile only items */}
-              <DropdownMenuItem as="a" class="flex items-center gap-2 cursor-pointer md:hidden" target="_blank" href="https://github.com/CorentinTh/enclosed" rel="noopener noreferrer">
-                <div class="i-tabler-brand-github text-lg"></div>
-                {t('navbar.github')}
-              </DropdownMenuItem>
+             
 
               <DropdownMenuSub>
                 <DropdownMenuSubTrigger as="a" class="flex items-center gap-2 md:hidden" aria-label="Change theme">
@@ -146,27 +133,7 @@ export const Navbar: Component = () => {
                 </DropdownMenuSubContent>
               </DropdownMenuSub>
 
-              {/* Default items */}
-              <DropdownMenuItem as="a" class="flex items-center gap-2 cursor-pointer" target="_blank" href={buildDocUrl({ path: '/' })}>
-                <div class="i-tabler-file-text text-lg"></div>
-                {t('navbar.settings.documentation')}
-              </DropdownMenuItem>
-
-              <DropdownMenuItem as="a" class="flex items-center gap-2 cursor-pointer" target="_blank" href={buildDocUrl({ path: '/integrations/cli' })}>
-                <div class="i-tabler-terminal text-lg"></div>
-                {t('navbar.settings.cli')}
-              </DropdownMenuItem>
-
-              <DropdownMenuItem as="a" class="flex items-center gap-2 cursor-pointer" target="_blank" href="https://github.com/CorentinTh/enclosed/issues/new/choose" rel="noopener noreferrer">
-                <div class="i-tabler-bug text-lg"></div>
-                {t('navbar.settings.report-bug')}
-              </DropdownMenuItem>
-
-              <DropdownMenuItem as="a" class="flex items-center gap-2 cursor-pointer" target="_blank" href="https://buymeacoffee.com/cthmsst" rel="noopener noreferrer">
-                <div class="i-tabler-pig-money text-lg"></div>
-                {t('navbar.settings.support')}
-              </DropdownMenuItem>
-
+              {/* Default items */} 
               {config.isAuthenticationRequired && authStore.getIsAuthenticated() && (
                 <>
                   <DropdownMenuSeparator />
@@ -191,28 +158,14 @@ export const Footer: Component = () => {
 
   return (
     <div class="bg-surface border-t border-border py-6 px-6 text-center text-muted-foreground flex flex-col sm:flex-row items-center justify-center gap-1">
-      <div>
-        {t('footer.crafted-by')}
-        {' '}
-        <Button variant="link" as="a" href="https://corentin.tech" target="_blank" class="p-0 text-muted-foreground underline hover:text-primary transition font-normal h-auto">Corentin Thomasset</Button>
-        .
-      </div>
-      <div>
-        {t('footer.source-code')}
-        {' '}
-        <Button variant="link" as="a" href="https://github.com/CorentinTh/enclosed" target="_blank" class="p-0 text-muted-foreground underline hover:text-primary transition font-normal h-auto">{t('footer.github')}</Button>
-        .
-      </div>
-
-      <div>
-        {t('footer.version')}
-        {' '}
-        <Button variant="link" as="a" href={`https://github.com/CorentinTh/enclosed/tree/v${buildTimeConfig.enclosedVersion}`} target="_blank" class="p-0 text-muted-foreground underline hover:text-primary transition font-normal h-auto">
-          v
-          {buildTimeConfig.enclosedVersion}
-        </Button>
-
-      </div>
+     <div class="footer-content">
+       <a href="https://www.youtube.com/channel/UCn0Yarp_h6oqn1-QLvlgbDg?sub_confirmation=1" target="_blank" rel="nofollow noopener"><span>Youtube</span></a>
+       - <a href="https://www.zymn.cc" target="_blank" rel="nofollow noopener"><span>{t('footer.blog')}</span></a>
+       - <a href="https://twitter.com/spatacus1986" target="_blank" rel="nofollow noopener"><span>Twitter</span></a>
+       - <a href="https://t.me/+8W45Y29o5T1mMGI1" target="_blank" rel="nofollow noopener"><span>{t('footer.telegram')}</span></a>
+       - <a href="https://v.douyin.com/iNpPYY4E/" target="_blank" rel="nofollow noopener"><span>抖音</span></a>
+       - <a href="https://www.ixigua.com/home/103680436540" target="_blank" rel="nofollow noopener"><span>西瓜视频</span></a> 
+    </div>
     </div>
   );
 };

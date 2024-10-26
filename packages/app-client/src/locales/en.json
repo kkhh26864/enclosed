@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Enclosed",
+    "title": "Secret Messenger",
     "description": "Send private and secure notes"
   },
   "insecureContextWarning": {
@@ -30,7 +30,9 @@
     "crafted-by": "Crafted by",
     "source-code": "Source code available on",
     "github": "GitHub",
-    "version": "Version"
+    "version": "Version",
+    "blog": "Blog",
+    "telegram": "Telegram Group"
   },
   "login": {
     "title": "Login to Enclosed",

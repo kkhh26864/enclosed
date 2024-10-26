@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Enclosed",
+    "title": "隐秘信使",
     "description": "发送私密、安全的笔记"
   },
   "insecureContextWarning": {
@@ -30,7 +30,9 @@
     "crafted-by": "作者：",
     "source-code": "源代码：",
     "github": "GitHub",
-    "version": "版本"
+    "version": "版本",
+    "blog": "博客",
+    "telegram": "电报群"
   },
   "login": {
     "title": "登录 Enclosed",

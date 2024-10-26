@@ -1,0 +1,142 @@
+{
+    "app": {
+      "title": "隱秘信使",
+      "description": "發送私密、安全的筆記"
+    },
+    "insecureContextWarning": {
+      "description": "您的連接不安全，應用必須通過 HTTPS 提供才能正常工作，否則將無法創建或查看筆記。",
+      "learn-more": "了解更多"
+    },
+    "navbar": {
+      "new-note": "新建筆記",
+      "github": "GitHub",
+      "language": "語言",
+      "theme": {
+        "theme": "主題",
+        "light-mode": "淺色模式",
+        "dark-mode": "深色模式",
+        "system-mode": "跟隨系統"
+      },
+      "settings": {
+        "documentation": "文檔",
+        "cli": "Enclosed CLI",
+        "support": "支持 Enclosed",
+        "report-bug": "報告錯誤",
+        "logout": "登出",
+        "contribute-to-i18n": "貢獻翻譯"
+      }
+    },
+    "footer": {
+      "crafted-by": "作者：",
+      "source-code": "源代碼：",
+      "github": "GitHub",
+      "version": "版本",
+      "blog": "博客",
+      "telegram": "電報群"
+    },
+    "login": {
+      "title": "登錄 Enclosed",
+      "description": "這是一個私有的 Enclosed 實例，輸入您的憑據以創建筆記。",
+      "email": "電子郵箱",
+      "password": "密碼",
+      "submit": "登錄",
+      "errors": {
+        "invalid-credentials": "無效的電子郵箱或密碼。",
+        "unknown": "發生未知錯誤，稍後再試。"
+      },
+      "footer": ["沒有賬戶？", "聯繫實例的擁有者。"]
+    },
+    "create": {
+      "errors": {
+        "empty-note": "請輸入筆記內容或附加文件。",
+        "rate-limit": "已超出創建筆記的速率限制，請稍後重試。",
+        "too-large": "筆記內容和附件過大，請減小大小後重試。",
+        "unauthorized": "您沒有創建筆記的權限，請登錄後重試。",
+        "api-not-found": "未找到 API 端點，服務器可能未正確配置。",
+        "unknown": "創建筆記時發生錯誤，請重試。"
+      },
+      "share": {
+        "button": "分享筆記",
+        "title": "共享筆記",
+        "description": "有一條分享給您的筆記。"
+      },
+      "settings": {
+        "placeholder": "在此輸入您的筆記內容...",
+        "password": {
+          "label": "筆記密碼",
+          "placeholder": "密碼..."
+        },
+        "expiration": "過期時間",
+        "delays": {
+          "1h": "1 小時",
+          "1d": "1 天",
+          "1w": "1 週",
+          "1m": "1 個月"
+        },
+        "delete-after-reading": {
+          "label": "閱後即焚",
+          "description": "閱讀後刪除筆記"
+        },
+        "attach-files": "附加文件",
+        "drop-files": {
+          "title": "將文件拖到這裡",
+          "description": "將文件拖放到這裡以附加到筆記"
+        },
+        "create": "創建筆記",
+        "creating": "正在創建筆記..."
+      },
+      "success": {
+        "title": "筆記創建成功",
+        "description": "您的筆記已創建，您現在可以使用以下鏈接分享它。",
+        "with-deletion": "閱讀後筆記將被刪除。",
+        "copy-link": "複製鏈接",
+        "copy-success": "鏈接已複製"
+      }
+    },
+    "view": {
+      "note-content": "筆記內容",
+      "download": "下載",
+      "download-all": "下載所有文件",
+      "request-password": {
+        "description": "這條筆記受密碼保護，請輸入密碼以解鎖。",
+        "form": {
+          "label": "密碼",
+          "placeholder": "筆記密碼...",
+          "unlock-button": "解鎖筆記",
+          "invalid": "您輸入的密碼無效或筆記 URL 不正確。"
+        }
+      },
+      "error": {
+        "invalid-url": {
+          "title": "無效的筆記 URL",
+          "description": "此筆記 URL 無效，請確保您使用的是正確的 URL。"
+        },
+        "rate-limit": {
+          "title": "超出速率限制",
+          "description": "已超出獲取筆記的速率限制，請稍後再試。"
+        },
+        "unauthorized": {
+          "title": "未授權",
+          "description": "此筆記是私密的，需要登錄才能查看。",
+          "button": "登錄"
+        },
+        "note-not-found": {
+          "title": "未找到筆記",
+          "description": "此筆記不存在、已過期或已被刪除。"
+        },
+        "fetch-error": {
+          "title": "發生錯誤",
+          "description": "獲取筆記時發生錯誤，請稍後再試。"
+        },
+        "decryption": {
+          "title": "發生錯誤",
+          "description": "解密筆記時發生錯誤，URL 可能無效。"
+        }
+      }
+    },
+    "copy": {
+      "label": "複製到剪貼板",
+      "success": "已複製！"
+    }
+  }
+  

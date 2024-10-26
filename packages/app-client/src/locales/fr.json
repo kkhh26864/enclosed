@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Enclosed",
+    "title": "Secret Messenger",
     "description": "Envoyez des notes privées et sécurisées"
   },
   "insecureContextWarning": {
@@ -28,7 +28,9 @@
     "crafted-by": "Créé par",
     "source-code": "Code source disponible sur",
     "github": "GitHub",
-    "version": "Version"
+    "version": "Version",
+    "blog": "Blog",
+    "telegram": "Groupe Telegram"
   },
   "login": {
     "title": "Connexion à Enclosed",
